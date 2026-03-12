@@ -1,54 +1,98 @@
-# Game Design Agency — Структура и роли
+# Game Design Agency — Структура агентства
 
-## Полная цепочка взаимодействия
+## Что мы делаем
+
+Мы — AI-геймдизайн-агентство. Клиент приходит с идеей или задачей, мы проводим её через полный цикл разработки геймдизайна и выдаём профессиональный Game Design Document.
+
+Каждый агент — специалист в своей области. Они работают последовательно и параллельно, передавая материалы по цепочке.
+
+---
+
+## Полная цепочка работы
 
 `
-Пользователь
-    ↓
-Creative Director          ← принимает задачу, формирует видение
-    ↓ раздаёт задачи
-┌─────────────────────────────────────┐
-│  Concept Designer                   │
-│  Systems Designer                   │ → специалисты делают свои части
-│  Narrative Designer                 │
-│  Level Designer                     │
-│  Monetization Designer              │
-│  Market Analyst                     │
-└─────────────────────────────────────┘
-    ↓ все материалы
-Lead Game Designer         ← собирает единый GDD
-    ↓ финальный GDD
-GDD Reviewer               ← ревью: находит ошибки, адресует специалистам
-    ↓ замечания по ролям
-Специалисты                ← правят свои части (одна итерация)
-    ↓ исправления
-GDD Reviewer               ← проверяет закрытие замечаний
-    ↓ финальный документ
-Creative Director          ← утверждает, выдаёт результат пользователю
-    ↓
-Пользователь
+КЛИЕНТ
+  │
+  ▼
+CREATIVE DIRECTOR          ← принимает задачу, задаёт вопросы, пишет Creative Brief
+  │
+  ├─── PROJECT MANAGER     ← включается с этого момента, контролирует весь процесс
+  │
+  ▼ раздаёт ТЗ по Brief'у
+┌─────────────────────────────────────────┐
+│  CONCEPT DESIGNER     — draft-концепции │
+│  SYSTEMS DESIGNER     — механики        │ ← работают параллельно
+│  NARRATIVE DESIGNER   — мир и история   │
+│  LEVEL DESIGNER       — структура мира  │
+│  MONETIZATION DESIGNER— монетизация     │
+│  MARKET ANALYST       — анализ рынка    │
+└─────────────────────────────────────────┘
+  │
+  ▼ материалы от всех специалистов
+LEAD GAME DESIGNER         ← собирает единый GDD, проверяет целостность
+  │
+  ▼ финальный GDD
+GDD REVIEWER               ← полный ревью, находит ошибки, адресует специалистам
+  │
+  ├──► СПЕЦИАЛИСТЫ         ← правят свои разделы (одна итерация)
+  │         │
+  │         ▼
+  └──► GDD REVIEWER        ← проверяет закрытие замечаний
+  │
+  ▼ финальный исправленный GDD
+CREATIVE DIRECTOR          ← утверждает, пишет Executive Summary
+  │
+  ▼
+КЛИЕНТ
 `
 
-## Роли
+---
 
-| # | Роль | Файл | Место в цепочке |
-|---|------|------|-----------------|
-| — | Creative Director | 01_creative_director.md | Начало и конец цепочки |
-| — | Project Manager | 02_project_manager.md | Контроль процесса на всех этапах |
-| 1 | Concept Designer | 03_concept_designer.md | Draft-концепции |
-| 2 | Systems Designer | 04_systems_designer.md | Механики и баланс |
-| 3 | Narrative Designer | 05_narrative_designer.md | Сюжет и мир |
-| 4 | Level Designer | 06_level_designer.md | Уровни и прогрессия |
-| 5 | GDD Writer | 07_gdd_writer.md | Оформление документа |
-| 6 | Monetization Designer | 08_monetization_designer.md | Монетизация и экономика |
-| 7 | Market Analyst | 09_market_analyst.md | Анализ рынка |
-| 8 | Playtesting Lead | 10_playtesting_lead.md | Сценарии тестирования |
-| — | Lead Game Designer | 00b_lead_game_designer.md | Сборка финального GDD |
-| — | GDD Reviewer | 00c_gdd_reviewer.md | Ревью и итерация правок |
+## Роли и файлы
 
-## Правила работы
+### Руководство
+| Роль | Файл | Функция |
+|------|------|---------|
+| Creative Director | [01_creative_director.md](01_creative_director.md) | Видение, коммуникация с клиентом, финальное утверждение |
+| Project Manager | [02_project_manager.md](02_project_manager.md) | Операционная координация всего процесса |
+| Lead Game Designer | [00b_lead_game_designer.md](00b_lead_game_designer.md) | Технический лидер, сборка GDD |
+| GDD Reviewer | [00c_gdd_reviewer.md](00c_gdd_reviewer.md) | Независимое ревью, итерация правок |
 
-- **Одна итерация ревью** — GDD Reviewer делает ревью один раз, замечания закрываются, документ идёт дальше
-- **Адресные замечания** — каждая правка направляется конкретному специалисту
-- **Creative Director** — финальная инстанция, утверждает результат
-- **Project Manager** — следит за процессом на всех этапах, не генерирует контент
+### Специалисты
+| Роль | Файл | Функция |
+|------|------|---------|
+| Concept Designer | [03_concept_designer.md](03_concept_designer.md) | Draft-концепции, USP, выбор направления |
+| Systems Designer | [04_systems_designer.md](04_systems_designer.md) | Механики, прогрессия, баланс, экономика |
+| Narrative Designer | [05_narrative_designer.md](05_narrative_designer.md) | Мир, лор, персонажи, сюжет |
+| Level Designer | [06_level_designer.md](06_level_designer.md) | Структура уровней, ритм контента |
+| GDD Writer | [07_gdd_writer.md](07_gdd_writer.md) | Форматирование и структура документа |
+| Monetization Designer | [08_monetization_designer.md](08_monetization_designer.md) | Модель монетизации, LiveOps |
+| Market Analyst | [09_market_analyst.md](09_market_analyst.md) | Конкуренты, аудитория, позиционирование |
+| Playtesting Lead | [10_playtesting_lead.md](10_playtesting_lead.md) | Анализ рисков, сценарии тестирования |
+
+---
+
+## Правила работы агентства
+
+### Одна итерация ревью
+GDD Reviewer делает ревью **один раз**. Замечания уходят специалистам, специалисты правят, Reviewer проверяет закрытие. Повторного полного ревью нет.
+
+### Адресные замечания
+Каждое замечание Reviewer'а содержит: что не так, в каком разделе, кто должен исправить. Никаких «это плохо» без адреса и конкретики.
+
+### Creative Director — финальная инстанция
+Только Creative Director принимает продуктовые решения. Специалисты предлагают — CD утверждает.
+
+### Project Manager не создаёт контент
+PM координирует процесс, не подменяет специалистов. Если PM пишет геймдизайн — что-то пошло не так.
+
+### Lead Game Designer отвечает за целостность
+GDD может быть из 10 разделов от 8 разных авторов. Lead отвечает за то, чтобы это был один документ, а не сборник текстов.
+
+---
+
+## Что получает клиент на выходе
+
+1. **Game Design Document** — полный структурированный документ, по которому можно начать разработку
+2. **Executive Summary** — краткое резюме на 1 страницу от Creative Director
+3. (опционально) **Презентация концепций** — если нужно выбрать направление до полного GDD
